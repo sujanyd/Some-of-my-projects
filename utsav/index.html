@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+        ),
+        url("photos/utsavbackground.jpeg");
+
+    background-size: cover;
+    background-position: center;
+}
+        
+        .container {
+            display: flex;          
+            gap: 20px;            
+            justify-content:center;
+            align-content: center;
+            margin-top: 40px;
+        }
+
+        .card {
+    transition: 0.5s ease;
+    cursor: pointer;
+    opacity: 0.2;          
+}
+
+.container:hover .card {
+    opacity: 0.2;         
+}
+
+.container:hover .card:hover {
+    opacity: 1;            
+    transform: scale(1.3);
+        }
+
+        .card img {
+            width: 250px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            
+        }
+        h1 , h4{
+            color: rgb(220, 213, 213);
+            margin-left:10% ;
+            font-size: 50px;
+        }
+        .back{
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="card"><img src="photos/utsavphoto5.jpeg" alt="utsav"></div>
+        <div class="card"><img src="photos/Utsavphoto1.jpeg" alt="utsav"></div>
+        <div class="card"><img src="photos/utsavphoto2.jpeg" alt="utsav"></div>
+        <div class="card"><img src="photos/utsavphoto3.jpeg" alt="utsav"></div>
+        <div class="card"><img src="photos/utsavphoto4.jpeg" alt="utsav"></div>
+        
+    </div>
+    <div class="back">
+        <h1>🎂🥳🎂 Happy birthday Utsav Bhai 🎂🥳🎂</h1>
+        <h4>May all your wishes come true, and may you finally get some time to sleep.</h4>
+    </div>
+   
+    
+    
+
+</body>
+</html>

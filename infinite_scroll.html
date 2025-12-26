@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            margin: 100px auto;
+            width: 100%;
+            border: 2px solid black;
+            overflow: hidden;
+            display: flex;
+            overflow-x: scroll;
+            
+            
+        }
+        .container::-webkit-scrollbar{
+            display: none;
+        }
+        .group{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            gap: 10px;
+            padding-right: 10px;
+            animation: spin 30s infin when IIite linear;
+        }
+        @keyframes spin{
+            from{translate: 0;}
+            to{translate: -100%;}
+        }
+        .card{
+            display: 0, 0, 0.5;
+            width:500px;
+            height:100px;
+            background-color: blue;
+            border-radius: 5px;
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="group">
+            <div class="card">1</div>
+            <div class="card">2</div>
+            <div class="card">3</div>
+            <div class="card">4</div>
+            <div class="card">5</div>
+            <div class="card">6</div>
+        </div>
+        <div aria-hidden class="group">
+            <div class="card">1dfd translate translate minus</div>
+            <div class="card">2</div>
+            <div class="card">3</div>
+            <div class="card">4</div>
+            <div class="card">5</div>
+            <div class="card">6</div>
+        </div>
+    </div>
+    
+</body>
+</html>
