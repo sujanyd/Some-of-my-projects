@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background: linear-gradient(rgb(69, 39, 39), rgb(49, 49, 79));
+}
+        .container{
+            
+            margin-left:40%;
+            margin-top:25%;
+            font-size: 150px;
+            
+        }
+        .year6{
+            color: white;
+            margin-left: 225px;
+            margin-top: -175px;
+            animation: move2 5s ease-in-out ;
+        }
+        .year2{
+            color: white;
+            margin-left: 225px;
+            margin-top: -175px;
+            animation: move 1000s ease-in-out;
+        }
+        .year{
+            color: white;
+        }
+
+        
+
+        @keyframes move{
+            from{
+                transform: translateY(0px);
+            }
+            to{
+                transform: translateY(-10000000000000000px);
+            }
+        }
+        @keyframes move2{
+            from{
+                transform: translateX(1000px);
+            }
+            to{
+                transform: translateY(0px);
+            }
+        }
+        .font {
+            color: white;
+    margin-left: 27%;
+    margin-top: -400px;
+    font-size: 100px;
+    opacity: 0;
+    animation: appear 10s ease-in-out 4s forwards;
+}
+
+        @keyframes appear {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.firework {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: explode 2s ease-out forwards;
+}
+
+@keyframes explode {
+    from {
+        transform: translate(0,0);
+        opacity: 1;
+    }
+    to {
+        transform: translate(var(--x), var(--y));
+        opacity: 0;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="year">202</div>
+        
+
+        <div class="year2">5</div>
+        
+        
+        <div class="year6">6</div>
+    </div>
+    <div class="font">🎊           Happy New Year        🎊 </div>
+    <script>
+function createFirework(x, y) {
+    for (let i = 0; i < 60; i++) {
+        const spark = document.createElement("div");
+        spark.className = "firework";
+        spark.style.left = x + "px";
+        spark.style.top = y + "px";
+
+        const angle = Math.random() * 2 * Math.PI;
+        const distance = Math.random() * 200;
+
+        spark.style.setProperty("--x", Math.cos(angle) * distance + "px");
+        spark.style.setProperty("--y", Math.sin(angle) * distance + "px");
+
+        spark.style.background = `hsl(${Math.random() * 360}, 100%, 60%)`;
+
+        document.body.appendChild(spark);
+
+        setTimeout(() => spark.remove(), 2000);
+    }
+}
+
+/* Start fireworks AFTER .font animation completes */
+const text = document.querySelector(".font");
+
+text.addEventListener("animationend", () => {
+    setInterval(() => {
+        const x = Math.random() * window.innerWidth;
+        const y = Math.random() * window.innerHeight * 0.6;
+        createFirework(x, y);
+    }, 600);
+});
+</script>
+</body>
+</html> 
