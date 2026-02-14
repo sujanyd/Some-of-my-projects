@@ -55,8 +55,9 @@ function same(){
 
 
 function same3(){
-    let value = input.value;
-    para3.innerText = "The temperature in the Kelvin is   " +( value + 273.15);
+    let value = Number(input.value);
+    
+    para3.innerText = "The temperature in the Kelvin is   " +(( value + 273.15));
     para3.style.fontSize = "30px";
     para3.style.marginTop = "30px";
     para3.style.fontWeight = "700";
