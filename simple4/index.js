@@ -1,0 +1,21 @@
+const input1 = document.getElementById("num1");
+const input2 = document.getElementById("num2");
+const para1 = document.getElementById("pa");
+
+function same() {
+    let value1 = Number(input1.value);
+    let value2 = Number(input2.value);
+
+    para1.innerText = "The total of bill is " + 
+        (value1 + (value1 * (value2 / 100)));
+
+    para1.style.fontSize = "30px";
+    para1.style.marginTop = "30px";
+    para1.style.fontWeight = "700";
+    para1.style.textAlign = "center";
+    para1.style.color = "white";
+}
+
+
+input1.addEventListener("input", same);
+input2.addEventListener("input", same);
