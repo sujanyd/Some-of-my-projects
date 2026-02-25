@@ -1,0 +1,62 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #4e73df, #1cc88a);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container */
+.container {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+/* Common styles for all cards */
+.card1, .card2, .card3 {
+    width: 120px;
+    height: 120px;
+    background: white;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Hover effect */
+.card1:hover,
+.card2:hover,
+.card3:hover {
+    transform: scale(1.15);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+/* Click effect */
+.card1:active,
+.card2:active,
+.card3:active {
+    transform: scale(0.95);
+}
+
+/* Result text */
+#pa {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    min-height: 30px;
+}
